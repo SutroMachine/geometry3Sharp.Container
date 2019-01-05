@@ -1,0 +1,36 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+environment:
+  access_token:
+    secure: 3Pc4S+ZcBNEiqJDWthe96uDsSJSeW2Rsb1UckEq8Tp/niew5yx8bA3uUYcHaCQ4G
+
+configuration: Release
+platform: Any CPU
+
+before_build:
+  - nuget restore
+
+build:
+  project: geometry3Sharp.sln
+  verbosity: minimal
+
+test_script:
+- cmd: >-
+    dotnet test --logger:Appveyor test\geometry3Sharp.Test.csproj -c Release 
+
+deploy:
+  - provider: Environment
+    name: production
+    on:
+      branch: master
+
+deploy_script:
+
+  - git config --global credential.helper store
+
+  - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+
+  - git config --global user.email "AppVeyor"
+
+  - git config --global user.name "AppVeyor CI"
