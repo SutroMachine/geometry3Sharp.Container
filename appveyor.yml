@@ -5,6 +5,9 @@ environment:
   access_token:
     secure: 3Pc4S+ZcBNEiqJDWthe96uDsSJSeW2Rsb1UckEq8Tp/niew5yx8bA3uUYcHaCQ4G
 
+install:
+ - git submodule update --init --recursive
+
 configuration: Release
 platform: Any CPU
 
