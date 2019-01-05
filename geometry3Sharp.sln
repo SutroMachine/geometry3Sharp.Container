@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "geometry3Sharp.Lib", "lib\geometry3Sharp.Lib.csproj", "{0C518DDA-28FE-44CA-9AB0-F9773974F13A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "geometry3Sharp.Test", "test\geometry3Sharp.Test.csproj", "{B108C20D-1F1B-4F22-8983-D556D275D507}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C518DDA-28FE-44CA-9AB0-F9773974F13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C518DDA-28FE-44CA-9AB0-F9773974F13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C518DDA-28FE-44CA-9AB0-F9773974F13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C518DDA-28FE-44CA-9AB0-F9773974F13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B108C20D-1F1B-4F22-8983-D556D275D507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B108C20D-1F1B-4F22-8983-D556D275D507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B108C20D-1F1B-4F22-8983-D556D275D507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B108C20D-1F1B-4F22-8983-D556D275D507}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95675302-315A-4168-8F96-E6EA57E9619E}
+	EndGlobalSection
+EndGlobal
