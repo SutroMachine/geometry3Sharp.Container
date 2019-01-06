@@ -22,6 +22,8 @@ build:
   project: geometry3Sharp.sln
   verbosity: minimal
 
-test_script:
-- cmd: >-
-    dotnet test --logger:Appveyor test\geometry3Sharp.Test.csproj -c Release
+test:
+  # only assemblies to test
+  assemblies:
+    only:
+      - geometry3Sharp.Test.dll
