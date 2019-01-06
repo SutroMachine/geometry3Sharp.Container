@@ -2,12 +2,14 @@ version: 1.0.{build}
 image: Visual Studio 2017
 
 environment:
-  access_token:
-    secure: 3Pc4S+ZcBNEiqJDWthe96uDsSJSeW2Rsb1UckEq8Tp/niew5yx8bA3uUYcHaCQ4G
+  priv_key:
+    secure: <encryped-value>
 
 install:
-  - git config --global credential.helper store
-  - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - ps: $fileContent = "-----BEGIN RSA PRIVATE KEY-----`n"
+  - ps: $fileContent += $env:priv_key.Replace(' ', "`n")
+  - ps: $fileContent += "`n-----END RSA PRIVATE KEY-----`n"
+  - ps: Set-Content c:\users\appveyor\.ssh\id_rsa $fileContent
   - git submodule update --init --recursive
 
 configuration: Release
