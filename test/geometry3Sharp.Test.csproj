@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\lib\geometry3Sharp.Lib.csproj" />
+    <ProjectReference Include="..\lib\geometry3Sharp.csproj" />
   </ItemGroup>
 
 </Project>
