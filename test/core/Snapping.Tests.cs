@@ -21,6 +21,13 @@ namespace g3.Test
             Assert.AreEqual(7, snapped);
         }
 
+        [TestMethod]
+        public void SnapToIncrement_LowOffset()
+        {
+            double snapped = Snapping.SnapToIncrement(1.2, 3.5, 0.2);
+            Assert.AreEqual(0.2, snapped);
+        }
+
 
         [TestMethod]
         public void SnapToNearbyIncrement_Nearby()
@@ -65,6 +72,13 @@ namespace g3.Test
         }
 
         [TestMethod]
+        public void SnapToIncrementLow_LowPosOffset()
+        {
+            double snapped = Snapping.SnapToIncrementLow(4.2, 2, -0.7);
+            Assert.AreEqual(4 - 0.7, snapped);
+        }
+
+        [TestMethod]
         public void SnapToIncrementHigh_LowPos()
         {
             double snapped = Snapping.SnapToIncrementHigh(4.2, 2);
@@ -91,5 +105,13 @@ namespace g3.Test
             double snapped = Snapping.SnapToIncrementHigh(-5.9, 2);
             Assert.AreEqual(-4, snapped);
         }
+
+        [TestMethod]
+        public void SnapToIncrementHigh_HighNegOffset()
+        {
+            double snapped = Snapping.SnapToIncrementHigh(-5.9, 2, 0.8);
+            Assert.AreEqual(-5.2, snapped);
+        }
+
     }
 }
