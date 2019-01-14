@@ -25,4 +25,4 @@ build:
 test: on
 
 test_script:
-  - vstest.console /logger:Appveyor
+  - vstest.console /logger:Appveyor geometry3Sharp.Test.dll
