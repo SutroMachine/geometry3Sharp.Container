@@ -5,8 +5,6 @@ namespace g3.Test
     [TestClass]
     public class SnappingTests
     {
-        private static double etol = 1e-4;
-
         [TestMethod]
         public void SnapToIncrement_Low()
         {
