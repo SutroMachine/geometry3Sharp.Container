@@ -22,8 +22,4 @@ build:
   project: geometry3Sharp.sln
   verbosity: minimal
 
-test:
-  # only assemblies to test
-  assemblies:
-    only:
-      - geometry3Sharp.Test.dll
+test: on
