@@ -23,3 +23,6 @@ build:
   verbosity: minimal
 
 test: on
+
+test_script:
+  - vstest.console /logger:Appveyor
